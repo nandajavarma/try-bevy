@@ -1,0 +1,13 @@
+image:
+    file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - rust-lang.rust-analyzer
+
+tasks:
+  - init: cargo build
+  - name: run
+    command: |
+      cargo run --target wasm32-unknown-unknown
+
